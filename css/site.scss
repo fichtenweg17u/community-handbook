@@ -1,0 +1,233 @@
+@import "_variables.scss";
+
+// font-size and page background.
+html {
+	font-size: 14px;
+	position: relative;
+	min-height: 100%;
+
+	@media (min-width: $md-media) {
+		font-size: 16px;
+	}
+}
+
+body {
+    background-color: #FFFFFF;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;  
+        opacity: .7; 
+        z-index: -1;
+        background-image: url(../img/wallpapersden.com_abstract-wave-grey-duotone_2560x1435.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+}
+
+// glass effect.
+
+@mixin glass($base-color: #FFFFFF, $border-width: 1px, $blur: $glass-blur, $opacity-background: 0.2, $opacity-border: 0.3) {
+	$border-color: rgba($base-color, $opacity-border);
+	$background-color: rgba($base-color, $opacity-background);
+
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	border: $border-width solid $border-color;
+	background-color: $background-color;
+	backdrop-filter: blur($blur);
+	-webkit-backdrop-filter: blur($blur);
+
+	&:hover {
+		background-color: scale-color($background-color, $lightness: +30%);
+		transition: 0.5s;
+	}
+}
+
+// layered containers.
+
+@mixin single-layer-spacer {
+	padding: $layer-spacing;
+}
+
+@mixin dual-layer-spacer {
+	padding: calc($layer-spacing + $layer-spacing);
+}
+
+@mixin triple-layer-spacer {
+	padding: calc($layer-spacing + $layer-spacing + $layer-spacing);
+}
+
+@mixin layer-0 {
+	display: block;
+	position: relative;
+	border-radius: $layer-0-rounding;
+}
+
+@mixin layer-1 {
+	display: block;
+	position: relative;
+	border-radius: $layer-1-rounding;
+}
+
+@mixin layer-2 {
+	display: block;
+	position: relative;
+	border-radius: $layer-2-rounding;
+}
+
+@mixin layer-control {
+	display: inline-block;
+	border-radius: $control-rounding;
+}
+
+// page layout.
+
+container {
+	display: grid;
+	position: relative;
+	margin: 20px auto 20px auto;
+	width: calc(100% - 40px);
+	height: calc(100% - 40px);
+	grid-template-columns: 1fr;
+	gap: $layer-0-rounding 0px;
+
+	content {
+		@include glass($secondary-color);
+		@include layer-0;
+		@include dual-layer-spacer;
+	}
+
+	@media (min-width: $md-media) {
+		width: 650px;
+	}
+
+	@media (min-width: $lg-media) {
+		width: 900px;
+		min-height: calc(100% - 40px);
+	}
+
+	@media (min-width: $xl-media) {
+		width: 1100px;
+	}
+}
+
+// page style.
+
+$button-border: 1px;
+$button-opacity-background: 0.3;
+$button-opacity-background-hover: 0.4;
+$button-opacity-background-click: 0.6;
+$button-opacity-border: 1;
+$control-blur: 20px;
+
+.btn {
+	@include layer-control;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	text-align: left;
+
+	&.btn-primary {
+		background-color: lighten($primary-color, 10%);
+		border: 1px solid $primary-color;
+
+		&:hover {
+			background-color: lighten($primary-color, 15%);
+			border-color: lighten($primary-color, 5%);
+		}
+
+		&:active, &:active:focus {
+			background-color: lighten($primary-color, 12%);
+		}
+	}
+
+	&.btn-secondary {
+		background-color: rgba($secondary-color, 0.3);
+		border: 1px solid $secondary-color;
+
+		&:hover {
+			background-color: rgba($secondary-color, 0.4);
+			border-color: $secondary-color;
+		}
+
+		&:active, &:active:focus {
+			background-color: rgba($secondary-color, 0.6);
+		}
+	}
+
+	&.btn-danger {
+		background-color: lighten($danger-color, 10%);
+		border: 1px solid $danger-color;
+
+		&:hover {
+			background-color: lighten($danger-color, 15%);
+			border-color: lighten($danger-color, 5%);
+		}
+
+		&:active, &:active:focus {
+			background-color: lighten($danger-color, 12%);
+		}
+	}
+
+	clr-icon {
+		margin-bottom: 4px;
+		margin-right: 5px;
+	}
+}
+
+h1 {
+	font-size: 2em;
+
+	@media(min-width: $lg-media) {
+		font-size: 2.5em;
+	}
+}
+
+h2 {
+	font-size: 1.5em;
+
+	@media(min-width: $lg-media) {
+		font-size: 1.7em;
+	}
+}
+
+h3 {
+	font-size: 1.2em;
+
+	@media(min-width: $lg-media) {
+		font-size: 1.4em;
+	}
+}
+
+p {
+	font-size: 1em;
+
+	@media(min-width: $lg-media) {
+		font-size: 1.1em;
+	}
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+}
+
+// page layout.
+
+.even-spacing {
+	margin-bottom: $layer-spacing;
+
+	&:last-of-type {
+		margin-bottom: 0px;
+	}
+}
+
+.auto-column-right {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	padding: 0px;
+}
