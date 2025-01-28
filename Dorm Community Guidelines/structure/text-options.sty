@@ -1,0 +1,91 @@
+\ProvidesPackage{structure/text-options}
+
+% Set the language to german for proper syllable splitting
+\usepackage{xstring}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% Pick a font: palatino, goudysans, lmodern or libertine
+\newcommand{\documentFont}{lmodern}
+\usepackage{\documentFont}
+
+% Set the margin between the text and the edge
+\newcommand{\margin}{2.5cm}
+\usepackage[margin=\margin,foot=1cm]{geometry}
+
+% Set the margin between the chapter headline and the top of the page
+\newcommand{\chapterMargin}{20pt}
+
+% allow adjusting the line spacing (e.g. for titlepage)
+\usepackage[onehalfspacing]{setspace}
+
+% Define available text colors
+\newcommand{\linkColor}{000000}
+\newcommand{\defineColors}{
+	\definecolor{LinkColor}{HTML}{\linkColor}
+    \definecolor{ListingBackground}{HTML}{F8F8F8}
+    \definecolor{black}{HTML}{000000}
+    \definecolor{green}{HTML}{008000}
+    \definecolor{blue}{HTML}{0000FF}
+    \definecolor{cyan}{HTML}{2B90AF}
+    \definecolor{brown}{HTML}{74531F}
+    \definecolor{violet}{HTML}{800080}
+    \definecolor{darkblue}{HTML}{1F377F}
+    \definecolor{darkred}{HTML}{800000}
+    \definecolor{gray}{HTML}{A6A6A6}
+    \definecolor{darkgray}{HTML}{575757}
+}
+
+% For pretty quotes
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\renewcommand{\mkbegdispquote}[2]{\itshape}
+
+% For enumerations
+\usepackage{enumitem}
+
+% For allowing multi-column-text
+\usepackage{multicol}
+
+% For using acronyms in the text; only print the ones that have been used.
+\usepackage[printonlyused]{acronym}
+
+% For formulas etc.
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% For using unit symbols like $, €, ...
+\usepackage{siunitx}
+\DeclareSIUnit{\EUR}{\text{\euro}}
+\sisetup{
+  per-mode = fraction,
+  inter-unit-product = \ensuremath{{}\cdot{}},
+}
+\newcommand{\dollar}{\mbox{\textdollar}}
+\setlength{\jot}{10pt}
+
+% Link settings
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true, 		
+	linkcolor=LinkColor, 	
+	citecolor=LinkColor,
+	filecolor=LinkColor,
+	menucolor=LinkColor,
+	urlcolor=LinkColor,
+	linktocpage=true, 
+	bookmarksnumbered=true 
+}
+
+% Define a horizontal rule for a signature etc.
+\newcommand{\SignatureRule}[1]{
+    \par\vspace*{\dimexpr-\parskip-\baselineskip+.1em}
+    \noindent\rule{#1}{0.2mm}
+    \par\vspace*{\dimexpr-\parskip-.5\baselineskip}
+}
+
+% A convenience command for indenting text manually.
+\newcommand{\tab}{\hspace{3mm}}
+
+% A convenience command for wrapping some text in quotes.
+\newcommand{\quotes}[1]{\glqq #1\grqq{}}

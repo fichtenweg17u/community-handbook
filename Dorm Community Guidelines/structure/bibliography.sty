@@ -1,0 +1,16 @@
+\ProvidesPackage{structure/bibliography}
+
+\newcommand{\quoteStyle}{alphabetic}
+
+\usepackage[
+	backend=biber,		% recommended. Alternative: bibtex
+	bibwarn=true,
+	bibencoding=utf8,	         % If .bib file is encoded with utf8, otherwise ascii
+	sortlocale=de_DE,
+	style=\quoteStyle,
+]{biblatex}
+
+% Allow the bibliography to split links grammatically incorrect. This allows links to be formatted properly within the text boundaries.
+\setcounter{biburlnumpenalty}{8000}
+\setcounter{biburllcpenalty}{8000}
+\setcounter{biburlucpenalty}{8000}

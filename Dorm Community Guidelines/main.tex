@@ -1,0 +1,55 @@
+% choose the document class
+% use scrreport for big documents with chapters
+% use scrartcl for smaller documents with only sections
+\documentclass[
+    pdftex,                % compiler
+    oneside,               % onesided printing, e.g. relevant for binding correction
+	11pt,                  % fontsize
+	parskip=half,          % Space (in lines) between paragraphs	
+	headheight = 12pt,     % Header hight
+	headsepline,           % Line after header
+	footheight = 16pt,     % Footer height
+	footsepline,           % Line before footer
+	abstract=true,         % Abstract headline
+	DIV=calc,              % Calculate print space
+	BCOR=8mm,              % binding correction setting (shift to the left to account for space occupied by binding)
+	headinclude=false,     % Exclude header from print space
+	footinclude=false,     % Exclude footer from print space
+	listof=totoc,          % Show List of Figures/Tables in Contents
+	toc=bibliography,      % Show Bibliography in Contents
+]{scrreport}
+
+% import the template-packages
+\usepackage{structure/text-options}
+\usepackage{structure/code-listings}
+\usepackage{structure/float-objects}
+\usepackage{structure/extended-glossary}
+\usepackage{structure/bibliography}
+
+% Now the document structure. Feel free to comment out sections you don't need.
+\begin{document}
+    % Initialize document
+    \defineColors{}
+    \RedeclareSectionCommand[beforeskip=\chapterMargin]{chapter}
+    \include{content/glossary}
+    
+    % The Titlepage
+    \input{content/titlepage}
+
+    % Start with roman numbering for declaration and abstract
+    \pagenumbering{Roman}
+    \input{content/intro}
+     
+    % Only page number in footer for directories
+    \pagestyle{plain}
+    \input{content/toc}
+    \cleardoublepage
+
+    % Switch to document pagestyle
+    \pagenumbering{arabic}
+    \pagestyle{headings}
+
+    % Chapters
+    \input{content/chapters/01 Responsibilities}
+    
+\end{document}

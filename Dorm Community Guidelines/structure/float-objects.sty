@@ -1,0 +1,25 @@
+\ProvidesPackage{structure/float-objects}
+
+% import and configure all the packages for rendering inserts.
+
+% allow items to float in containers
+\usepackage{float}
+
+% allow rotating floats
+\usepackage{rotating}
+
+% and to add captions beneath
+\usepackage[format=plain,margin={1cm,1cm}]{caption} 
+\addtokomafont{caption}{\small}
+
+% Styled tables
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{longtable}
+
+% Adjust the spacing in tables
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.5}
+
+% For including images and PDF
+\usepackage{graphicx}
+\usepackage{pdfpages}

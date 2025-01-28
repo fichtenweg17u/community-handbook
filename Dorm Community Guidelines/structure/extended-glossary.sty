@@ -1,0 +1,172 @@
+\ProvidesPackage{structure/extended-glossary}
+\usepackage[nonumberlist,toc]{glossaries}
+
+% Generate glossary
+%\makeglossaries{}
+
+% Extend the glossary by german declination forms
+% Glossary forms "unbestimmte Artikel"
+
+% nominative -> "Wer oder was?"
+\glsaddkey
+ {nominative}% key
+ {\gls{\glslabel}}% default value
+ {\glsentrynominative}% no link cs
+ {\Glsentrynominative}% no link ucfirst cs
+ {\glsnom}% link cs
+ {\Glsnom}% link ucfirst cs
+ {\GLSnom}% link all caps cs
+
+% genitive -> "Wessen?"
+\glsaddkey
+ {genitive}% key
+ {\gls{\glslabel}}% default value
+ {\glsentrygenitive}% no link cs
+ {\Glsentrygenitive}% no link ucfirst cs
+ {\glsgen}% link cs
+ {\Glsgen}% link ucfirst cs
+ {\GLSgen}% link all caps cs
+
+% dative -> "Wem?"
+\glsaddkey
+ {dative}% key
+ {\gls{\glslabel}}% default value
+ {\glsentrydative}% no link cs
+ {\Glsentrydative}% no link ucfirst cs
+ {\glsdat}% link cs
+ {\Glsdat}% link ucfirst cs
+ {\GLSdat}% link all caps cs
+
+% accusative -> "Wen?"
+\glsaddkey
+ {accusative}% key
+ {\gls{\glslabel}}% default value
+ {\glsentryaccusative}% no link cs
+ {\Glsentryaccusative}% no link ucfirst cs
+ {\glsacc}% link cs
+ {\Glsacc}% link ucfirst cs
+ {\GLSacc}% link all caps cs
+
+% nominative -> "Wer oder was?"
+\glsaddkey
+ {pluralNominative}% key
+ {\glspl{\glslabel}}% default value
+ {\glsentryplnominative}% no link cs
+ {\Glsentryplnominative}% no link ucfirst cs
+ {\glsplnom}% link cs
+ {\Glsplnom}% link ucfirst cs
+ {\GLSplnom}% link all caps cs
+
+% genitive -> "Wessen?"
+\glsaddkey
+ {pluralGenitive}% key
+ {\glspl{\glslabel}}% default value
+ {\glsentryplgenitive}% no link cs
+ {\Glsentryplgenitive}% no link ucfirst cs
+ {\glsplgen}% link cs
+ {\Glsplgen}% link ucfirst cs
+ {\GLSplgen}% link all caps cs
+
+% dative -> "Wem?"
+\glsaddkey
+ {pluralDative}% key
+ {\glspl{\glslabel}}% default value
+ {\glsentrypldative}% no link cs
+ {\Glsentrypldative}% no link ucfirst cs
+ {\glspldat}% link cs
+ {\Glspldat}% link ucfirst cs
+ {\GLSpldat}% link all caps cs
+
+% accusative -> "Wen?"
+\glsaddkey
+ {pluralAccusative}% key
+ {\glspl{\glslabel}}% default value
+ {\glsentryplaccusative}% no link cs
+ {\Glsentryplaccusative}% no link ucfirst cs
+ {\glsplacc}% link cs
+ {\Glsplacc}% link ucfirst cs
+ {\GLSplacc}% link all caps cs
+ 
+ 
+
+% Glossary forms "bestimmte Artikel"
+
+% nominative -> "Wer oder was?"
+\glsaddkey
+ {nominativeBest}% key
+ {\glsnom{\glslabel}}% default value
+ {\glsentrynominativebest}% no link cs
+ {\Glsentrynominativebest}% no link ucfirst cs
+ {\glsnombest}% link cs
+ {\Glsnombest}% link ucfirst cs
+ {\GLSnombest}% link all caps cs
+
+% genitive -> "Wessen?"
+\glsaddkey
+ {genitiveBest}% key
+ {\glsgen{\glslabel}}% default value
+ {\glsentrygenitivebest}% no link cs
+ {\Glsentrygenitivebest}% no link ucfirst cs
+ {\glsgenbest}% link cs
+ {\Glsgenbest}% link ucfirst cs
+ {\GLSgenbest}% link all caps cs
+
+% dative -> "Wem?"
+\glsaddkey
+ {dativeBest}% key
+ {\glsdat{\glslabel}}% default value
+ {\glsentrydativebest}% no link cs
+ {\Glsentrydativebest}% no link ucfirst cs
+ {\glsdatbest}% link cs
+ {\Glsdatbest}% link ucfirst cs
+ {\GLSdatbest}% link all caps cs
+
+% accusative -> "Wen?"
+\glsaddkey
+ {accusativeBest}% key
+ {\glsacc{\glslabel}}% default value
+ {\glsentryaccusativebest}% no link cs
+ {\Glsentryaccusativebest}% no link ucfirst cs
+ {\glsaccbest}% link cs
+ {\Glsaccbest}% link ucfirst cs
+ {\GLSaccbest}% link all caps cs
+
+% nominative -> "Wer oder was?"
+\glsaddkey
+ {pluralNominativeBest}% key
+ {\glsplnom{\glslabel}}% default value
+ {\glsentryplnominativebest}% no link cs
+ {\Glsentryplnominativebest}% no link ucfirst cs
+ {\glsplnombest}% link cs
+ {\Glsplnombest}% link ucfirst cs
+ {\GLSplnombest}% link all caps cs
+
+% genitive -> "Wessen?"
+\glsaddkey
+ {pluralGenitiveBest}% key
+ {\glsplgen{\glslabel}}% default value
+ {\glsentryplgenitivebest}% no link cs
+ {\Glsentryplgenitivebest}% no link ucfirst cs
+ {\glsplgenbest}% link cs
+ {\Glsplgenbest}% link ucfirst cs
+ {\GLSplgenbest}% link all caps cs
+
+% dative -> "Wem?"
+\glsaddkey
+ {pluralDativeBest}% key
+ {\glspldat{\glslabel}}% default value
+ {\glsentrypldativebest}% no link cs
+ {\Glsentrypldativebest}% no link ucfirst cs
+ {\glspldatbest}% link cs
+ {\Glspldatbest}% link ucfirst cs
+ {\GLSpldatbest}% link all caps cs
+
+% accusative -> "Wen?"
+\glsaddkey
+ {pluralAccusativeBest}% key
+ {\glsplacc{\glslabel}}% default value
+ {\glsentryplaccusativebest}% no link cs
+ {\Glsentryplaccusativebest}% no link ucfirst cs
+ {\glsplaccbest}% link cs
+ {\Glsplaccbest}% link ucfirst cs
+ {\GLSplaccbest}% link all caps cs

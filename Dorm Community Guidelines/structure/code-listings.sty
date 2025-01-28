@@ -1,0 +1,83 @@
+\ProvidesPackage{structure/code-listings}
+
+% Import the package
+\usepackage{listings}
+% This produces a warning float@addtolists, but that is not an issue, see for details:
+% https://golatex.de/koma-script-warnung-in-verbindung-mit-listings-package-t2058,highlight,float+addtolists.html
+
+% If desired, predefined language-settings can be loaded.
+% \lstloadlanguages{PHP,Python,Java,C,C++,bash}
+
+% For proper highlighting, C# and XML are defined manually below, you need to maintain the type- and functions-lists
+% Definition for C#.
+\lstdefinelanguage{CSharp}
+{
+    sensitive = true,
+    keywords={public, private, internal, protected, static, const, enum, class, record, interface, int, string, double, float, object, bool, true, false, null, is, not, var, readonly, override, new, out, base, using, void},
+    morekeywords={[2] if, foreach, return, for, switch, case},
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morecomment=[l][\color{darkgray}]{\#},
+    morestring=[b]',
+    morestring=[b]",
+    identifierstyle=\color{black},
+    keywordstyle=\color{blue},
+    keywordstyle={[2]\color{violet}},
+    commentstyle=\color{green},
+    stringstyle=\color{darkred},
+    showstringspaces=false,
+    mathescape=false
+}
+
+% Definition for xml.
+\lstdefinelanguage{XML}
+{
+    morestring=[b]",
+    morestring=[s]{>}{<},
+    morecomment=[s]{<?}{?>},
+    morecomment=[s]{<!--}{-->},
+    morekeywords={xmlns,version,type},
+    identifierstyle=\color{blue},
+    keywordstyle=\color{cyan},
+    commentstyle=\color{green},
+    stringstyle=\color{black},
+    showstringspaces=false
+}
+
+% Define global styling options for code snippets
+\lstset{
+    language=CSharp,                            % default language
+    numbers=left,                                 % position of line numbers (left, right)
+    stepnumber=1,                                 % set number to each line
+    numbersep=5pt,                                % 5pt between number and source code
+    numberstyle=\tiny,                            % letter size of numbers
+    breaklines=true,                              % break lines if necessary (true, false)
+    breakautoindent=true,                         % indenting after break line (true, false)
+    postbreak=\space,                             % break line after space
+    tabsize=4,                                    % tabulator size
+    basicstyle=\ttfamily\footnotesize,            % font style
+    showspaces=false,			                  % show space (true, false)
+    extendedchars=true,		                      % show all Latin1 characters (true, false)
+    captionpos=b,			                      % sets the caption-position to bottom
+    backgroundcolor=\color{ListingBackground},    % source code background
+    xleftmargin=10pt,		                      % margin left
+    xrightmargin=5pt,		                      % margin right
+    frame=single,			                      % border settings
+    frameround=ffff,
+    rulecolor=\color{darkgray},	                  % border color
+    fillcolor=\color{ListingBackground},
+    aboveskip=20pt,
+    literate= % Verwendung von Umlauten in Listings ermöglichen.
+      {Ö}{{\"O}}1
+      {Ä}{{\"A}}1
+      {Ü}{{\"U}}1
+      {ß}{{\ss}}1
+      {ü}{{\"u}}1
+      {ä}{{\"a}}1
+      {ö}{{\"o}}1
+}
+
+% Rename Listings
+\renewcommand\lstlistingname{Listing}
+\renewcommand\lstlistlistingname{Listings}
+\def\lstlistingautorefname{Listing}
