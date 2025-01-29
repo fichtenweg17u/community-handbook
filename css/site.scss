@@ -16,12 +16,12 @@ body {
 
     &::before {
         content: "";
-        position: absolute;
+        position: fixed;
         top: 0; 
         left: 0;
         width: 100%; 
         height: 100%;  
-        opacity: .7; 
+        opacity: 0.9; 
         z-index: -1;
         background-image: url(../img/wallpapersden.com_abstract-wave-grey-duotone_2560x1435.jpg);
         background-position: center;
@@ -31,7 +31,7 @@ body {
 
 // glass effect.
 
-@mixin glass($base-color: #FFFFFF, $border-width: 1px, $blur: $glass-blur, $opacity-background: 0.2, $opacity-border: 0.3) {
+@mixin glass($base-color: #FFFFFF, $border-width: 1px, $blur: $glass-blur, $opacity-background: $glass-background-opacity, $opacity-border: $glass-border-opacity) {
 	$border-color: rgba($base-color, $opacity-border);
 	$background-color: rgba($base-color, $opacity-background);
 
@@ -96,7 +96,7 @@ container {
 	gap: $layer-0-rounding 0px;
 
 	content {
-		@include glass($secondary-color);
+		@include glass(lighten($secondary-color, 20));
 		@include layer-0;
 		@include dual-layer-spacer;
 	}
