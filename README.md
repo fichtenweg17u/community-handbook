@@ -27,7 +27,7 @@ Once you have all of that installed, checkout the git repository, open the folde
 
 The initial spin-up might take a little, since it will download the Debian container base and run all the startup scripts. If you want to see the progress in more detail, just click on the progress panel in the lower right corner. When everything is booted up, you should see the TEX extensions running, so there should be a new "TEX" tab in the bar on the left side.
 
-Attention though: While the TEX extension is installed, the latex environment is not. For that you need to execute the initialization script: Open a terminal (`STRG + SHIFT + P` to open command palette, then execute `Terminal: Create new Terminal`) and run
+Attention though: While the TEX extension is installed, the latex environment is not. For that you need to execute the initialization script: Open a terminal (`CTRL + SHIFT + P` to open command palette, then execute `Terminal: Create new Terminal`) and run
 ```
 ./post-create.sh
 ```
@@ -36,4 +36,8 @@ This COULD be run by default on startup, but the download and installation of th
 
 ### Working with LaTeX
 
-Now you can just enter the .tex files and start typing as you like. On every save the pdf document should be recompiled into `/dorm_community_handbook/main.pdf`. To view the pdf side-by-side with the source enter a .tex file, press `STRG + SHIFT + P` to open command palette and run `LaTeX Workshop: View LaTeX PDF file`. Happy writing! :)
+Now you can just enter the .tex files and start typing as you like. On every save the pdf document should be recompiled into `/dorm_community_handbook/main.pdf`. To view the pdf side-by-side with the source enter a .tex file, press `CTRL + SHIFT + P` to open command palette and run `LaTeX Workshop: View LaTeX PDF file`. 
+
+A little Tipp: To jump in the preview-pdf to where your cursor is in the latex source file, press `CTRL + ALT + J`, and to jump with the cursor to a specific point in the pdf just `CTRL + CLICK` where you want to go.
+
+Happy writing! :)
