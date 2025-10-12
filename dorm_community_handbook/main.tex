@@ -19,6 +19,11 @@
 	toc=bibliography,      % Show Bibliography in Contents
 ]{scrreport}
 
+% utf-8 support
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
 % import the template-packages
 \usepackage{structure/text-options}
 \usepackage{structure/code-listings}
@@ -50,11 +55,11 @@
     \pagestyle{headings}
 
     % Chapters
-    \input{Dorm Community Handbook/content/chapters/00 Quickstart}
-    \input{content/chapters/01 Introductions}
-    \input{content/chapters/02 Dorm Life}
-    \input{content/chapters/03 Organization}
-    \input{content/chapters/04 QnA}
-    \input{content/chapters/05 Responsibilities}
+    \input{content/chapters/00_quickstart}
+    \input{content/chapters/01_introductions}
+    \input{content/chapters/02_dorm_life}
+    \input{content/chapters/03_organization}
+    \input{content/chapters/04_qna}
+    \input{content/chapters/05_responsibilities}
     
 \end{document}
