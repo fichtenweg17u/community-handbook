@@ -8,6 +8,13 @@
   // Use 'onCreateCommand' to run commands after the container is initialized.
   "onCreateCommand": {
     "allowPostCreateScript": "sudo chmod +x /workspaces/community-handbook/post-create.sh"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop"
+      ]
+    }
   }
 
   // Features to add to the dev container. More info: https://containers.dev/features.
