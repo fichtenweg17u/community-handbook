@@ -28,34 +28,34 @@
 
 % Now the document structure. Feel free to comment out sections you don't need.
 \begin{document}
-    % Initialize document
-    \defineColors{}
-    \RedeclareSectionCommand[beforeskip=\chapterMargin]{chapter}
-    \include{content/glossary}
-    
-    % The Titlepage
-    \input{content/titlepage}
+% Initialize document
+\defineColors{}
+\RedeclareSectionCommand[beforeskip=\chapterMargin]{chapter}
+\include{content/glossary}
 
-    % Start with roman numbering for declaration and abstract
-    \pagenumbering{Roman}
-    \input{content/intro}
-     
-    % Only page number in footer for directories
-    \pagestyle{plain}
-    \input{content/toc}
-    \cleardoublepage
+% The Titlepage
+\input{content/titlepage}
 
-    % Switch to document pagestyle
-    \pagenumbering{arabic}
-    \pagestyle{headings}
+% Start with roman numbering for declaration and abstract
+\pagenumbering{Roman}
+\input{content/intro}
 
-    % Chapters
-    \input{content/chapters/00_quickstart}
-    \input{content/chapters/01_introductions}
-    \input{content/chapters/02_dorm_life}
-    \input{content/chapters/03_organization}
-    \input{content/chapters/04_qna}
-    \input{content/chapters/05_responsibilities}
-    \input{content/chapters/06_former_roommates}
-    
+% Only page number in footer for directories
+\pagestyle{plain}
+\input{content/toc}
+\cleardoublepage
+
+% Switch to document pagestyle
+\pagenumbering{arabic}
+\pagestyle{headings}
+
+% Chapters
+\input{content/chapters/00_quickstart}
+\input{content/chapters/01_introductions}
+\input{content/chapters/02_dorm_life}
+\input{content/chapters/03_organization}
+\input{content/chapters/04_qna}
+\input{content/chapters/05_responsibilities}
+\input{content/chapters/06_former_roommates}
+
 \end{document}

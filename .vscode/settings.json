@@ -1,5 +1,19 @@
 {
-    "latex-workshop.latex.autoBuild.run": "onSave",
-    "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
-    "latex-workshop.synctex.afterBuild.enabled": true
+	"latex-workshop.latex.autoBuild.run": "onSave",
+	"latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
+	"latex-workshop.synctex.afterBuild.enabled": true,
+	"editor.defaultFormatter": "James-Yu.latex-workshop",
+	"editor.formatOnSave": true,
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }

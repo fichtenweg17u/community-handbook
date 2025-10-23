@@ -12,26 +12,32 @@ html {
 }
 
 body {
-    background-color: #FFFFFF;
+	background-color: #ffffff;
 
-    &::before {
-        content: "";
-        position: fixed;
-        top: 0; 
-        left: 0;
-        width: 100%; 
-        height: 100%;  
-        opacity: 0.9; 
-        z-index: -1;
-        background-image: url(../img/wallpapersden.com_abstract-wave-grey-duotone_2560x1435.jpg);
-        background-position: center;
-        background-size: cover;
-      }
+	&::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.9;
+		z-index: -1;
+		background-image: url(../img/wallpapersden.com_abstract-wave-grey-duotone_2560x1435.jpg);
+		background-position: center;
+		background-size: cover;
+	}
 }
 
 // glass effect.
 
-@mixin glass($base-color: #FFFFFF, $border-width: 1px, $blur: $glass-blur, $opacity-background: $glass-background-opacity, $opacity-border: $glass-border-opacity) {
+@mixin glass(
+	$base-color: #ffffff,
+	$border-width: 1px,
+	$blur: $glass-blur,
+	$opacity-background: $glass-background-opacity,
+	$opacity-border: $glass-border-opacity
+) {
 	$border-color: rgba($base-color, $opacity-border);
 	$background-color: rgba($base-color, $opacity-background);
 
@@ -140,7 +146,8 @@ $control-blur: 20px;
 			border-color: lighten($primary-color, 5%);
 		}
 
-		&:active, &:active:focus {
+		&:active,
+		&:active:focus {
 			background-color: lighten($primary-color, 12%);
 		}
 	}
@@ -154,7 +161,8 @@ $control-blur: 20px;
 			border-color: $secondary-color;
 		}
 
-		&:active, &:active:focus {
+		&:active,
+		&:active:focus {
 			background-color: rgba($secondary-color, 0.6);
 		}
 	}
@@ -168,7 +176,8 @@ $control-blur: 20px;
 			border-color: lighten($danger-color, 5%);
 		}
 
-		&:active, &:active:focus {
+		&:active,
+		&:active:focus {
 			background-color: lighten($danger-color, 12%);
 		}
 	}
@@ -182,7 +191,7 @@ $control-blur: 20px;
 h1 {
 	font-size: 2em;
 
-	@media(min-width: $lg-media) {
+	@media (min-width: $lg-media) {
 		font-size: 2.5em;
 	}
 }
@@ -190,7 +199,7 @@ h1 {
 h2 {
 	font-size: 1.5em;
 
-	@media(min-width: $lg-media) {
+	@media (min-width: $lg-media) {
 		font-size: 1.7em;
 	}
 }
@@ -198,7 +207,7 @@ h2 {
 h3 {
 	font-size: 1.2em;
 
-	@media(min-width: $lg-media) {
+	@media (min-width: $lg-media) {
 		font-size: 1.4em;
 	}
 }
@@ -206,14 +215,14 @@ h3 {
 p {
 	font-size: 1em;
 
-	@media(min-width: $lg-media) {
+	@media (min-width: $lg-media) {
 		font-size: 1.1em;
 	}
 }
 
 .center-content {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 // page layout.

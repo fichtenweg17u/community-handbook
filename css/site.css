@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 body::before {
   content: "";
@@ -76,37 +76,37 @@ container content:hover {
   text-align: left;
 }
 .btn.btn-primary {
-  background-color: #1d5fec;
-  border: 1px solid #114AC5;
+  background-color: rgb(29.4626168224, 94.7196261682, 235.5373831776);
+  border: 1px solid #114ac5;
 }
 .btn.btn-primary:hover {
-  background-color: #356fee;
-  border-color: #1353dc;
+  background-color: rgb(52.9369158879, 111.4018691589, 237.5630841121);
+  border-color: rgb(19.0257009346, 82.8177570093, 220.4742990654);
 }
 .btn.btn-primary:active, .btn.btn-primary:active:focus {
-  background-color: #2765ec;
+  background-color: rgb(38.8523364486, 101.3925233645, 236.3476635514);
 }
 .btn.btn-secondary {
   background-color: rgba(221, 221, 221, 0.3);
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
 }
 .btn.btn-secondary:hover {
   background-color: rgba(221, 221, 221, 0.4);
-  border-color: #DDDDDD;
+  border-color: #dddddd;
 }
 .btn.btn-secondary:active, .btn.btn-secondary:active:focus {
   background-color: rgba(221, 221, 221, 0.6);
 }
 .btn.btn-danger {
-  background-color: #f25366;
-  border: 1px solid #EF233C;
+  background-color: rgb(242.4576271186, 82.5423728814, 102.1398305085);
+  border: 1px solid #ef233c;
 }
 .btn.btn-danger:hover {
-  background-color: #f46a7b;
-  border-color: #f13b51;
+  background-color: rgb(244.186440678, 106.313559322, 123.2097457627);
+  border-color: rgb(240.7288135593, 58.7711864407, 81.0699152542);
 }
 .btn.btn-danger:active, .btn.btn-danger:active:focus {
-  background-color: #f35c6f;
+  background-color: rgb(243.1491525424, 92.0508474576, 110.5677966102);
 }
 .btn clr-icon {
   margin-bottom: 4px;
